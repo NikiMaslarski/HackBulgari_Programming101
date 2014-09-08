@@ -1,11 +1,14 @@
 def Dash_insert(num):
-    list_of_numbers = [int(digit) for digit in str(num)]
     result = []
-    for i in range(len(list_of_numbers) - 1):
-        result.append(number[i])
-        if number[i] % 2 == 1  && number[i+1] % 2 == 1:
+    while num:
+        result.append(str(num % 10))
+        if (num % 10)%2 == 1 and (num / 10 % 10) % 2 == 1:
+            result.append('-')
+        num = num/10
+    result.reverse()
+    return ''.join(result)
 
 
 
 
-Dash_insert(99946)
+print(Dash_insert(1111))
