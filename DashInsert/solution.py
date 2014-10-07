@@ -7,8 +7,3 @@ def Dash_insert(num):
         num = num/10
     result.reverse()
     return ''.join(result)
-
-
-
-
-print(Dash_insert(1111))
