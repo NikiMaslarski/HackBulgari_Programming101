@@ -1,5 +1,6 @@
 VOWELS = ['a', 'e', 'i', 'o', 'u', 'y']
 
+
 def count_vowels(string):
     counter = 0
     for vowel in VOWELS:

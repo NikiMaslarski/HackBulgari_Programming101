@@ -1,7 +1,7 @@
 def contains_digit(number, digit):
     while number:
-        if number%10 == digit:
+        if number % 10 == digit:
             return True
-        number = number//10
+        number = number // 10
     return False
 

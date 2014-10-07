@@ -8,3 +8,4 @@ def sevens_in_a_row(arr, n):
         else:
             counter = 0
     return False
+

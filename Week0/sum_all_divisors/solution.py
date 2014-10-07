@@ -1,6 +1,6 @@
 def get_all_divisors(n):
     divisors = [1]
-    for number in range (2, n//2 + 1):
+    for number in range(2, n // 2 + 1):
         if n % number == 0:
             divisors.append(number)
     divisors.append(n)
