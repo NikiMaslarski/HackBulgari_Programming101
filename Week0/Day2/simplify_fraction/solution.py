@@ -10,7 +10,7 @@ def gcd(a, b):
     if b == 0:
         return a
 
-    if ~a & 1:  # is a even?
+    if ~a & 1:  # is a even
         if ~b & 1:  # is b even
             return gcd(a >> 1, b >> 1) << 1
         else:
