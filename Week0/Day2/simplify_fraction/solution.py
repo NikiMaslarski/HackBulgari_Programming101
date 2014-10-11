@@ -1,4 +1,8 @@
 def gcd(a, b):
+    """
+    Implementation of Stein's algorithm
+    for finding Greatest Common Divisor
+    """
     if a == b:
         return a
     if a == 0:
@@ -6,13 +10,13 @@ def gcd(a, b):
     if b == 0:
         return a
 
-    if ~a & 1:
-        if ~b & 1:
+    if ~a & 1:  # is a even?
+        if ~b & 1:  # is b even
             return gcd(a >> 1, b >> 1) << 1
         else:
             return gcd(a >> 1, b)
 
-    if ~b & 1:
+    if ~b & 1:  # a is odd, checks if b is even
         return gcd(a, b >> 1)
 
     if a > b:
