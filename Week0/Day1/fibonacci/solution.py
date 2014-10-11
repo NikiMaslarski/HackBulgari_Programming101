@@ -1,5 +1,7 @@
 def nth_fibonacci(n):
-    if n <= 2:
-        return 1
-    return nth_fibonacci(n - 1) + nth_fibonacci(n - 2)
+    current = 1
+    previous = 1
+    for i in range(2, n):
+        current, previous = current + previous, current
+    return current
 
