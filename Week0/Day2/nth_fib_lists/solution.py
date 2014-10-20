@@ -5,6 +5,6 @@ def nth_fib_lists(listA, listB, n):
     previous = listA
     current = listB
     for i in range(2, n):
-        current, previous = current + previous, current
+        current, previous = previous + current, current
     return current
 

@@ -26,5 +26,9 @@ def gcd(a, b):
 
 
 def simplify_fraction(fraction):
+    if fraction[1] == 0:
+        raise Exception("Cannot devide by zero!!!")
+
     return (fraction[0] // gcd(*fraction),
             fraction[1] // gcd(*fraction))
+

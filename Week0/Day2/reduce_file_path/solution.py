@@ -5,8 +5,10 @@ def reduce_file_path(path):
         list_as_stack.append(folder)
         if folder == '..':
             list_as_stack.pop()
+            list_as_stack.pop()
         elif folder == '.':
-            pass
+            list_as_stack.pop()
+
     result = '/'.join(list_as_stack)
     if len(result) <= 1:
         return result
