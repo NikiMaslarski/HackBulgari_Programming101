@@ -16,6 +16,9 @@ class TestDungeon(unittest.TestCase):
 
         self.dungeon = Dungeon(test_file)
 
+    def test_spawn(self):
+        
+
 
 
 if __name__ == '__main__':
