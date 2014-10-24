@@ -4,6 +4,8 @@ class Entity:
         self.name = name
         self.health = health
         self.MAX_HEALTH = health
+        self.weapon = False
+        self.coordinates = [None, None]
 
     def get_health(self):
         return self.health
@@ -24,4 +26,16 @@ class Entity:
         if self.health > self.MAX_HEALTH:
             self.health = self.MAX_HEALTH
         return True
+
+    def has_weapon(self):
+        return bool(self.weapon)
+
+    def equip_weapon(self, weapon):
+        self.weapon = weapon
+
+    def attack(self):
+        if not self.has_weapon():
+            return 0
+        else:
+            return self.weapon.damage
 

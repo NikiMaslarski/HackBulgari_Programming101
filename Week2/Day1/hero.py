@@ -10,3 +10,6 @@ class Hero(Entity):
     def known_as(self):
         return "{} the {}".format(self.name, self.nickname)
 
+    def __str__(self):
+        return 'H'
+

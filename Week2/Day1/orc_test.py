@@ -1,6 +1,7 @@
 import unittest
 
 import orc
+import weapon
 
 
 class TestOrc(unittest.TestCase):
@@ -20,26 +21,11 @@ class TestOrc(unittest.TestCase):
         orc_ = orc.Orc("Thrall", 500, 0.89)
         self.assertAlmostEqual(orc_.berserk_factor, 1)
 
-    def test_get_helth(self):
-        self.assertEqual(self.orc.get_health(), self.orc.MAX_HEALTH)
-        self.assertTrue(self.orc.is_alive())
+    def test_orc_attack(self):
+        sword = weapon.Weapon("The Ash Bringer", 5000, 1)
+        self.orc.equip_weapon(sword)
+        self.assertAlmostEqual(self.orc.attack(), 5000 * self.orc.berserk_factor)
 
-        self.orc.health = -100
-        self.assertFalse(self.orc.is_alive())
-
-    def test_take_damage(self):
-        self.orc.take_damage(200)
-        self.assertEqual(self.orc.get_health(), self.orc.health)
-
-    def test_take_healing(self):
-        self.orc.take_damage(300)
-
-        self.assertTrue(self.orc.take_healing(200))
-        self.assertEqual(self.orc.get_health(), self.orc.MAX_HEALTH - 100)
-        self.assertTrue(self.orc.take_healing(200))
-        self.assertEqual(self.orc.get_health(), self.orc.MAX_HEALTH)
-        self.orc.take_damage(self.orc.MAX_HEALTH)
-        self.assertFalse(self.orc.take_healing(200))
 
 if __name__ == '__main__':
     unittest.main()

@@ -15,3 +15,9 @@ class Orc(Entity):
         else:
             self.berserk_factor = berserk_factor
 
+    def attack(self):
+        return Entity.attack(self) * self.berserk_factor
+
+    def __str__(self):
+        return "O"
+
