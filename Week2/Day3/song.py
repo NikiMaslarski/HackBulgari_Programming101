@@ -2,11 +2,11 @@ class Song:
     MAX_RATE = 5
     MIN_RATE = 1
 
-    def __init__(self, name, artist, album, length, bitrate):
+    def __init__(self, name, artist, album, length, bitrate, raiting=0):
         self.name = name
         self.artist = artist
         self.album = album
-        self.raiting = 0
+        self.raiting = raiting
         self.length = length
         self.bitrate = bitrate
 
@@ -18,5 +18,5 @@ class Song:
             self.raiting = value
 
     def _length(self):
-        return "{:2d}:{:2d}".format(self.length // 60, self.length % 60)
+        return "{:02d}:{:02d}".format(self.length // 60, self.length % 60)
 
