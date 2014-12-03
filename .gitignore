@@ -51,9 +51,13 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+<<<<<<< HEAD
 
 *.swp
 *.txt
 MEGATRON
 orders_*
+=======
+>>>>>>> 3487c40c8fe9f94eac65cf8390cc301ea0f5e058
 *.db
+env/
